@@ -1,0 +1,202 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.kv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 77px;
+  height: 77px;
+  background-color: crimson;
+  margin: 7px;
+  border-radius: 7px;
+}
+
+.kvc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.circle {
+  /* border-radius: 50%; */
+  background-color: antiquewhite;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+$color: #0cf;
+
+button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  // outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  margin: 6px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+/* optional reset for presentation */
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+span {
+  width: 25%;
+  text-align: left;
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  color: #fff;
+  a {
+    font-size: 0.7rem;
+    color: #999;
+    text-decoration: underline;
+  }
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+// <div class="lds-hourglass"></div>
+
+svg {
+  width: 30px;
+  height: 30px;
+  fill: crimson;
+}
+.kitas-svg:hover {
+  fill: yellow;
+}
+.trecias-svg:hover {
+  transform: scale(0.7);
+  fill: yellow;
+}
+.h1 {
+  transition: all 2s ease-out;
+}
+
+.kvcf {
+  display: flex;
+  font-size: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 90vw;
+}
