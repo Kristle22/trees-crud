@@ -1,6 +1,16 @@
 const express = require('express')
 const app = express()
-const port = 3003
+
+const path = require('path');
+
+const port = process.env.PORT || 3003;
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static('build'));
+  app.get('*', (req, res) => {
+    req.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+  })
+}
 
 const cors = require("cors");
 app.use(cors());

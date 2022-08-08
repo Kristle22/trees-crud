@@ -4,8 +4,8 @@
   "description": "trees server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "jaja"
